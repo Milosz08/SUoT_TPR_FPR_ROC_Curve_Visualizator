@@ -1,6 +1,8 @@
 # TPR and FPR Calculator with ROC Curve Visualizator
 Desktop app that calculates TPR and FPR coefficients and generates a graph of the ROC curve.
 
+<img src="https://raw.githubusercontent.com/Milosz08/SUoT_TPR_FPR_ROC_Curve_Visualizator/master/img/roc-program-image.png" width="1920">
+
 ## Table of content
 * [Clone and install](#clone-and-install)
 * [How to use](#how-to-use)
