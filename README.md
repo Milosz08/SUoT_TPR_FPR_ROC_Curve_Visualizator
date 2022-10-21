@@ -1,5 +1,5 @@
 # TPR and FPR Calculator with ROC Curve Visualizator
-Desktop app that calculates TPR and FPR coefficients and generates confusion matrixes and graph of the ROC curve. Program created to facilitate calculations for "Artificial Intelligence" classes.
+Desktop app that calculates TPR and FPR coefficients and generates confusion matrixes with graph of the ROC curve. Program created to facilitate calculations for "Artificial Intelligence" classes.
 
 > NOTE: Before using this program, make sure you have .NET Framework v4.8 installed on your computer.
 
