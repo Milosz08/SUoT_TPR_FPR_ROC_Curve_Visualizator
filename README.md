@@ -4,18 +4,9 @@ Desktop app that calculates TPR and FPR coefficients and generates confusion mat
 > NOTE: Before using this program, make sure you have .NET Framework v4.8 installed on your computer.
 
 ## Table of content
-* [Clone and install](#clone-and-install)
 * [How to use](#how-to-use)
 * [Author](#author)
 * [License](#license)
-
-<a name="clone-and-install"></a>
-## Clone and install
-
-To install the program on your computer, use the command below (or use the build-in GIT system in your IDE environment):
-```
-$ git clone https://github.com/Milosz08/SUoT_TPR_FPR_ROC_Curve_Visualizator
-```
 
 <a name="how-to-use"></a>
 ## How to use
