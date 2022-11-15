@@ -15,7 +15,7 @@ Desktop app that calculates TPR and FPR coefficients and generates confusion mat
 
 To get started with program, click the `Generate OB sequence` and `Generate randomized Targets` button (optionally, you can generate only one type of Target). Once generated, click `Calculate and generate plot` to visualize the data in the form of a confusion matrix and ROC curve plot.
 
-<img src="https://raw.githubusercontent.com/Milosz08/SUoT_TPR_FPR_ROC_Curve_Visualizator/master/roc-program-image.png" width="1920">
+<img src="https://raw.githubusercontent.com/Milosz08/SUoT_TPR_FPR_ROC_Curve_Visualizator/master/roc-program-image.jpg" width="1920">
 
 <a name="author"></a>
 ## Author
