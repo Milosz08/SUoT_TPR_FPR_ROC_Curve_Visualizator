@@ -29,9 +29,9 @@ namespace TprFprCalculatorAndRocCurveVisualizator
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.InitialDataTable = new System.Windows.Forms.DataGridView();
             this.ColumnsCountNumeric = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@ namespace TprFprCalculatorAndRocCurveVisualizator
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.DataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.InitialDataTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColumnsCountNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TprFprDataGridView)).BeginInit();
@@ -70,7 +71,7 @@ namespace TprFprCalculatorAndRocCurveVisualizator
             this.InitialDataTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.InitialDataTable.RowTemplate.Height = 25;
             this.InitialDataTable.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.InitialDataTable.Size = new System.Drawing.Size(841, 92);
+            this.InitialDataTable.Size = new System.Drawing.Size(953, 92);
             this.InitialDataTable.TabIndex = 0;
             // 
             // ColumnsCountNumeric
@@ -133,7 +134,7 @@ namespace TprFprCalculatorAndRocCurveVisualizator
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(857, 10);
+            this.label2.Location = new System.Drawing.Point(969, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 13);
             this.label2.TabIndex = 7;
@@ -142,7 +143,7 @@ namespace TprFprCalculatorAndRocCurveVisualizator
             // ConfusionMatrixesFlowPanel
             // 
             this.ConfusionMatrixesFlowPanel.AutoScroll = true;
-            this.ConfusionMatrixesFlowPanel.Location = new System.Drawing.Point(857, 30);
+            this.ConfusionMatrixesFlowPanel.Location = new System.Drawing.Point(969, 30);
             this.ConfusionMatrixesFlowPanel.Name = "ConfusionMatrixesFlowPanel";
             this.ConfusionMatrixesFlowPanel.Size = new System.Drawing.Size(229, 528);
             this.ConfusionMatrixesFlowPanel.TabIndex = 8;
@@ -157,7 +158,8 @@ namespace TprFprCalculatorAndRocCurveVisualizator
             this.TprFprDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TprFprDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2});
+            this.Column2,
+            this.Column3});
             this.TprFprDataGridView.EnableHeadersVisualStyles = false;
             this.TprFprDataGridView.Location = new System.Drawing.Point(621, 133);
             this.TprFprDataGridView.MultiSelect = false;
@@ -168,7 +170,7 @@ namespace TprFprCalculatorAndRocCurveVisualizator
             this.TprFprDataGridView.RowTemplate.Height = 25;
             this.TprFprDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TprFprDataGridView.ShowEditingIcon = false;
-            this.TprFprDataGridView.Size = new System.Drawing.Size(230, 423);
+            this.TprFprDataGridView.Size = new System.Drawing.Size(342, 423);
             this.TprFprDataGridView.TabIndex = 9;
             // 
             // Column1
@@ -234,39 +236,45 @@ namespace TprFprCalculatorAndRocCurveVisualizator
             // 
             // DataChart
             // 
-            chartArea5.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea5);
+            chartArea1.Name = "ChartArea1";
+            this.DataChart.ChartAreas.Add(chartArea1);
             this.DataChart.IsSoftShadows = false;
             this.DataChart.Location = new System.Drawing.Point(7, 198);
             this.DataChart.Name = "DataChart";
             this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series9.LabelBorderWidth = 2;
-            series9.Legend = "Legend1";
-            series9.LegendText = "dawd";
-            series9.LegendToolTip = "dawd";
-            series9.MarkerBorderWidth = 2;
-            series9.MarkerSize = 12;
-            series9.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Cross;
-            series9.Name = "Series2";
-            series10.BorderWidth = 2;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series10.LabelBorderWidth = 4;
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.DataChart.Series.Add(series9);
-            this.DataChart.Series.Add(series10);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series1.LabelBorderWidth = 2;
+            series1.Legend = "Legend1";
+            series1.LegendText = "dawd";
+            series1.LegendToolTip = "dawd";
+            series1.MarkerBorderWidth = 2;
+            series1.MarkerSize = 12;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Cross;
+            series1.Name = "Series2";
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series2.LabelBorderWidth = 4;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.DataChart.Series.Add(series1);
+            this.DataChart.Series.Add(series2);
             this.DataChart.Size = new System.Drawing.Size(606, 360);
             this.DataChart.TabIndex = 15;
             this.DataChart.Text = "chart1";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 566);
+            this.ClientSize = new System.Drawing.Size(1206, 566);
             this.Controls.Add(this.DataChart);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -314,6 +322,7 @@ namespace TprFprCalculatorAndRocCurveVisualizator
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataVisualization.Charting.Chart DataChart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
 

@@ -39,6 +39,7 @@ namespace TprFprCalculatorAndRocCurveVisualizator
             InitialDataTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             TprFprDataGridView.Columns[0].HeaderCell.Value = "TPR";
             TprFprDataGridView.Columns[1].HeaderCell.Value = "FPR";
+            TprFprDataGridView.Columns[2].HeaderCell.Value = "ACC";
             DataChart.ChartAreas[0].AxisX.Title = "FPR";
             DataChart.ChartAreas[0].AxisY.Title = "TPR";
             GenerateColumnsAndRows();
@@ -231,7 +232,7 @@ namespace TprFprCalculatorAndRocCurveVisualizator
 
         private void CalculateTprFpr(bool clearInput)
         {
-            TprFprDataGridView.ColumnCount = 2;
+            TprFprDataGridView.ColumnCount = 3;
             TprFprDataGridView.RowCount = _confusionMatrixesData.Count;
             for (int i = 0; i < _confusionMatrixesData.Count; i++)
             {
@@ -242,13 +243,17 @@ namespace TprFprCalculatorAndRocCurveVisualizator
                 else
                 {
                     double[,] matrix = _confusionMatrixesData[i].ConfusionMatrix;
-                    double FPR_X = 0, TPR_Y = 0;
+                    double FPR_X = 0, TPR_Y = 0, ACC = 0;
                     if ((matrix[1, 0] + matrix[1, 1]) != 0)
                         FPR_X = (matrix[1, 0] / (matrix[1, 0] + matrix[1, 1]));  //fpr
                     if ((matrix[0, 0] + matrix[0, 1]) != 0)
                         TPR_Y = (matrix[0, 0] / (matrix[0, 0] + matrix[0, 1]));  //tpr;
+                    double numerator = matrix[0, 0] + matrix[1, 1];
+                    if (numerator != 0)
+                        ACC = numerator / (numerator + matrix[0, 1] + matrix[1, 0]);
                     TprFprDataGridView[0, i].Value = TPR_Y.ToString("0.000000000");
                     TprFprDataGridView[1, i].Value = FPR_X.ToString("0.000000000");
+                    TprFprDataGridView[2, i].Value = ACC.ToString("0.00%");
                     for (int j = 0; j < 2; j++)
                         DataChart.Series[j].Points.AddXY(FPR_X, TPR_Y);
                 }
